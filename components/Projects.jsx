@@ -17,7 +17,7 @@ const Projects = () => {
       description:
         "TV Time is a modern movie discovery and rating app built using React and a public movie API. Explore trending films and their ratings in a stylish UI.",
       link: "https://tv0-time1.vercel.app",
-      img: "/assets/tvtime.png",
+      img: "/assets/tvTime.png",
     },
     {
       title: "OrderBoost",
