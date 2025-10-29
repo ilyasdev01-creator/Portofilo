@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap');
+html, body {
+  background-color: #212121;
+
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Special Gothic";
+}
+
+h1{ 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
