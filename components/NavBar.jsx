@@ -32,7 +32,7 @@ const Button = () => {
           <div className="container">
             <div onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })} className="btn">About</div>
             <div onClick={() => document.getElementById('skills').scrollIntoView({ behavior: 'smooth' })} className="btn">Skills</div>
-            <div className="btn">Contact</div>
+            <div onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="btn">Contact</div>
             <div onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })} className="btn">Projects</div>
             <svg className="outline" overflow="visible" width={400} height={60} viewBox="0 0 400 60">
               <rect className="rect" pathLength={100} x={0} y={0} width={400} height={60} fill="transparent" strokeWidth={5} />
