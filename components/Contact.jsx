@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import ShopContext from "../contexts/context.jsx";
 
 const Contact = () => {
@@ -56,7 +56,7 @@ const Contact = () => {
 
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com"
+          href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBnNRGpCdJFGFsvcpCkQJHvJwbZnqxglmPqdXwfDnFlNMsbbNwvFBfHwFMpjFCShQwBSCXq"
           target="_blank"
           rel="noopener noreferrer"
           className={`text-4xl transition-all duration-300 transform hover:scale-110 ${mode === "dark"
@@ -64,7 +64,7 @@ const Contact = () => {
             : "text-[#212121] hover:text-[#00acc1] hover:drop-shadow-[0_0_8px_#00acc1]"
             }`}
         >
-          <FaLinkedin />
+          <FaEnvelope />
         </a>
       </div>
     </section>
