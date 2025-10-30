@@ -1,10 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import ShopContext from "../contexts/context.jsx";
+
 const Projects = () => {
   const { mode } = useContext(ShopContext);
+  const [showAll, setShowAll] = useState(false);
 
   const projects = [
+    {
+      title: "Weatherly",
+      description:
+        "Weatherly is a weather application that provides real-time weather updates and forecasts. Built with React and a weather API.",
+      link: "https://weatherly01.vercel.app",
+      img: "/assets/weatherly.png",
+    },
     {
       title: "Forever",
       description:
@@ -17,7 +26,7 @@ const Projects = () => {
       description:
         "TV Time is a modern movie discovery and rating app built using React and a public movie API. Explore trending films and their ratings in a stylish UI.",
       link: "https://tv0-time1.vercel.app",
-      img: "/assets/tvTime.png",
+      img: "/assets/tvtime.png",
     },
     {
       title: "OrderBoost",
@@ -28,6 +37,8 @@ const Projects = () => {
     },
   ];
 
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
     <section
       id="projects"
@@ -37,32 +48,32 @@ const Projects = () => {
         }`}
     >
       <h1
-        className={`text-4xl md:text-5xl font-bold mb-16 text-center tracking-wide transition-all duration-500 ${mode === "dark" ? "text-white" : "text-[#212121]"
+        className={`text-4xl md:text-5xl font-bold mb-16 text-center tracking-wide ${mode === "dark" ? "text-white" : "text-[#212121]"
           }`}
       >
         My Recent Projects
       </h1>
 
       <div className="flex flex-col gap-20 w-full max-w-6xl">
-        {projects.map((project, index) => (
+        {displayedProjects.map((project, index) => (
           <div
             key={index}
-            className={`grid grid-cols-1 md:grid-cols-2 items-center rounded-2xl overflow-hidden shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-xl ${mode === "dark"
+            className={`grid grid-cols-1 md:grid-cols-2 items-center rounded-2xl overflow-hidden shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-500 ${mode === "dark"
               ? "bg-[#1e1e1e] hover:shadow-cyan-400/20"
               : "bg-white hover:shadow-[#00acc1]/20"
               }`}
           >
             {/* Left Text Section */}
-            <div className="p-8 flex flex-col gap-4 order-2 md:order-1 transition-all duration-500">
+            <div className="p-8 flex flex-col gap-4 order-2 md:order-1">
               <h2
-                className={`text-3xl font-semibold transition-all duration-500 ${mode === "dark" ? "text-cyan-400" : "text-[#0097a7]"
+                className={`text-3xl font-semibold ${mode === "dark" ? "text-cyan-400" : "text-[#0097a7]"
                   }`}
               >
                 {project.title}
               </h2>
 
               <p
-                className={`text-base leading-relaxed transition-all duration-500 ${mode === "dark" ? "text-gray-300" : "text-gray-700"
+                className={`text-base leading-relaxed ${mode === "dark" ? "text-gray-300" : "text-gray-700"
                   }`}
               >
                 {project.description}
@@ -84,14 +95,14 @@ const Projects = () => {
             </div>
 
             {/* Right Image Section */}
-            <div className="relative group order-1 md:order-2 transition-all duration-500">
+            <div className="relative group order-1 md:order-2">
               <img
                 src={project.img}
                 alt={project.title}
                 className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div
-                className={`absolute inset-0 transition-opacity duration-300 flex items-center justify-center ${mode === "dark"
+                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${mode === "dark"
                   ? "bg-black/50 group-hover:opacity-100 opacity-0"
                   : "bg-[#e0f7fa]/60 group-hover:opacity-100 opacity-0"
                   }`}
@@ -115,13 +126,13 @@ const Projects = () => {
 
       <div className="mt-20 text-center">
         <button
-          disabled
-          className={`px-8 py-3 rounded-full text-lg font-semibold transition-all duration-500 cursor-not-allowed ${mode === "dark"
-            ? "bg-[#2a2a2a] text-gray-400"
-            : "bg-gray-200 text-gray-500"
+          onClick={() => setShowAll(!showAll)}
+          className={`cursor-pointer px-8 py-3 rounded-full text-lg font-semibold transition-all duration-500 ${mode === "dark"
+            ? "bg-cyan-500 text-white hover:bg-cyan-400"
+            : "bg-[#00acc1] text-white hover:bg-[#0097a7]"
             }`}
         >
-          No more projects yet !
+          {showAll ? "Show Less" : "See More Projects"}
         </button>
       </div>
     </section>
