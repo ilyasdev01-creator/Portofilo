@@ -24,7 +24,7 @@ import {
   SiPostgresql,
   SiSocketdotio,
   SiTensorflow,
-  SiFlask
+  SiFlask,
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 
@@ -140,6 +140,12 @@ function App() {
       level: 88,
       icon: <FaJs className="text-yellow-400" />,
       color: 'from-yellow-400 to-yellow-300'
+    },
+    {
+      name: 'MongoDb',
+      level: 70,
+      icon: <SiMongodb className="text-green-400" />,
+      color: 'from-green-400 to-green-300'
     }
   ];
 
@@ -156,7 +162,7 @@ function App() {
       title: "StudyHub",
       description: "Real world studing application that encourage pepole to study",
       tech: ["React", "MongoDB", "Express", "Tailwind"],
-      icons: [<FaReact key="r2" />, <SiTailwindcss key="t1" />, <SiExpress key="e1" />, <FaNodeJs key="n1" />,],
+      icons: [<FaReact key="r2" />, <SiTailwindcss key="t1" />, <SiExpress key="e1" />, <FaNodeJs key="n1" />, <SiMongodb key="t1" />],
       live: "https://studyhub-11.vercel.app",
       emoji: "📚"
     },
