@@ -27,6 +27,7 @@ import {
   SiFlask,
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+import { icons } from 'lucide-react';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -166,6 +167,14 @@ function App() {
       live: "https://studyhub-11.vercel.app",
       emoji: "📚"
     },
+    {
+      title: "GapAtica",
+      description: "A job portal for new softaware developers to know what they still miss in their skillset (coming soon ...)",
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind'],
+      icons: [<FaReact key="r3" />, <FaNodeJs key="n1" />, <SiMongodb key="m1" />, <SiTailwindcss key="t1" />, <SiExpress key="e1" />],
+      live: '#',
+      emoji: "💼"
+    }
   ];
 
   const NavItem = ({ href, children, isActive }) => (
