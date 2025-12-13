@@ -580,7 +580,7 @@ function App() {
             <a href="#" className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all transform hover:-translate-y-1 shadow-lg">
               <FaLinkedin />
             </a>
-            <a href="#" className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-500 transition-all transform hover:-translate-y-1 shadow-lg">
+            <a href="https://www.youtube.com/channel/UC0SHRbCo8xdvdktmaYT2cGw" target="_blank" className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-500 transition-all transform hover:-translate-y-1 shadow-lg">
               <FaYoutube />
             </a>
           </div>
